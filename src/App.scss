@@ -1,0 +1,12 @@
+section {
+  display: flex;
+  flex-direction: row;
+  div {
+    display: flex;
+    flex-direction: row;
+  }
+  button {
+    height: 5rem;
+    width: 10rem;
+  }
+}
