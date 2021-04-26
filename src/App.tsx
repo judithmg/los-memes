@@ -1,15 +1,16 @@
-import React from "react";
-import "./App.scss";
+import "./styles/App.scss";
 import { DndProvider } from "react-dnd";
 import { HTML5Backend } from "react-dnd-html5-backend";
-import Example from "./custom-drag-layer";
+import { Editor } from "./pages";
 
 const App = () => {
   return (
     <>
-      <DndProvider backend={HTML5Backend}>
-        <Example />
-      </DndProvider>
+      <main>
+        <DndProvider backend={HTML5Backend}>
+          <Editor />
+        </DndProvider>
+      </main>
     </>
   );
 };
