@@ -4,14 +4,12 @@ import axios from "axios";
 interface ActionTypes {
   GET_MEMES: string;
   SET_MEME: string;
-  SET_BOXES: {};
   SET_FONT_SIZE: string;
   SET_COLOR: string;
 }
 const actionTypes: ActionTypes = {
   GET_MEMES: "GET_MEMES",
   SET_MEME: "SET_MEME",
-  SET_BOXES: "SET_BOXES",
   SET_FONT_SIZE: "SET_FONT_SIZE",
   SET_COLOR: "SET_COLOR",
 };
@@ -52,10 +50,5 @@ const setFontSize = (font: string) => {
     font,
   };
 };
-const setBoxes = () => {
-  return {
-    type: actionTypes.SET_BOXES,
-  };
-};
 
-export { getMemes, setMeme, actionTypes, setColor, setFontSize, setBoxes };
+export { getMemes, setMeme, actionTypes, setColor, setFontSize };

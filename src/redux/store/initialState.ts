@@ -4,10 +4,6 @@ const initialState = {
   customize: {
     color: "",
     font: "",
-    boxes: {
-      0: { top: -400, left: 0 },
-      1: { top: -300, left: 500 },
-    },
   },
 };
 
