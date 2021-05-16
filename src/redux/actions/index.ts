@@ -6,12 +6,14 @@ interface ActionTypes {
   SET_MEME: string;
   SET_FONT_SIZE: string;
   SET_COLOR: string;
+  HIDE_RESIZE: string;
 }
 const actionTypes: ActionTypes = {
   GET_MEMES: "GET_MEMES",
   SET_MEME: "SET_MEME",
   SET_FONT_SIZE: "SET_FONT_SIZE",
   SET_COLOR: "SET_COLOR",
+  HIDE_RESIZE: "HIDE_RESIZE",
 };
 
 const dbUrl = "https://api.imgflip.com/get_memes";
@@ -50,5 +52,10 @@ const setFontSize = (font: string) => {
     font,
   };
 };
+const hideResize = () => {
+  return {
+    type: actionTypes.HIDE_RESIZE,
+  };
+};
 
-export { getMemes, setMeme, actionTypes, setColor, setFontSize };
+export { getMemes, setMeme, actionTypes, setColor, setFontSize, hideResize };

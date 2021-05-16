@@ -4,6 +4,7 @@ const initialState = {
   customize: {
     color: "",
     font: "",
+    hideResize: false,
   },
 };
 
