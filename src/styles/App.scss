@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: rgb(35, 33, 41);
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+}
+
 textarea {
   width: 300px;
   height: 100px;
@@ -5,15 +17,19 @@ textarea {
   font-family: "Impact";
   text-shadow: 0 1px 1px #000;
 }
+.hideResize {
+  resize: none;
+}
 section {
   display: flex;
   flex-direction: row;
   width: 90vw;
   .main__meme {
+    margin: 5px;
     width: 70%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     img {
       max-width: 100%;
     }
@@ -21,8 +37,20 @@ section {
   .main__customize {
     width: 30%;
     margin: 20px;
+    .main__btns {
+      display: flex;
+      flex-direction: row;
+      button {
+        min-width: 50%;
+      }
+    }
   }
   .all-memes {
+    button {
+      background-color: #88cf97;
+      outline: none;
+      border: 2px solid rgb(187, 186, 186);
+    }
     .memes__meme {
       width: 50%;
     }
@@ -36,11 +64,74 @@ section {
   position: relative;
 }
 
-.memes__container {
-  // display: flex;
-  // flex-direction: column;
+.btn-options,
+.btn-del {
+  position: relative;
+  border: none;
+  cursor: pointer;
+  padding: 15px 40px;
+  margin: 15px 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  background: #4ecb69;
+  color: #fff;
+  box-shadow: 0 6px #52ab3c;
+  border-radius: 20px;
+  &:hover {
+    box-shadow: 0 4px #52ab3c;
+    top: 2px;
+  }
+}
+
+.btn-del {
+  padding: 4px 2px;
+  margin: 2px;
+  background: #cb4e4e;
+  box-shadow: 0 4px #ab523c;
+  border-radius: 0px;
+  &:hover {
+    box-shadow: 0 2px #ab523c;
+    top: 2px;
+  }
+}
+
+.main__text {
+  span {
+    margin-right: 10px;
+  }
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .memes__meme {
   width: 200px;
+}
+
+//SCROLLBAR
+
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4ecb69;
+  border: 0px none #ffffff;
+  border-radius: 50px;
+}
+
+::-webkit-scrollbar-track {
+  background: #52ab3c;
+  border: 0px none #ffffff;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
 }
